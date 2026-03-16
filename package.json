@@ -1,0 +1,16 @@
+{
+  "name": "dator3-web",
+  "version": "1.0.0",
+  "description": "DATOR3 Web",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.1"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.1"
+  }
+}

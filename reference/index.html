@@ -1,0 +1,1307 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DATOR3 | Reference</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/favicon/favicon.svg"
+    />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="../assets/output.css" />
+    <link rel="stylesheet" href="../assets/cards.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gray-50 text-gray-950 flex flex-col min-h-screen">
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 bg-white shadow">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between gap-4 px-6 py-4 md:grid md:grid-cols-[150px_minmax(0,1fr)_88px] md:gap-8"
+      >
+        <a href="/" class="block w-37.5 shrink-0">
+          <img
+            src="../assets/logo.png"
+            alt="DATOR3 logo"
+            width="150"
+            class="block w-37.5 h-auto"
+          />
+        </a>
+
+        <nav class="hidden md:flex items-center justify-center gap-8 text-sm">
+          <a
+            href="../o-nas/"
+            class="hover:text-orange-500 transition-colors duration-300 ease-in-out"
+            >O nás</a
+          >
+          <a
+            href="../nase-sluzby/"
+            class="hover:text-orange-500 transition-colors duration-300 ease-in-out"
+            >Naše služby</a
+          >
+          <a
+            href="../partneri/"
+            class="hover:text-orange-500 transition-colors duration-300 ease-in-out"
+            >Partneři</a
+          >
+          <a href="#" class="text-orange-500 font-semibold">Reference</a>
+          <a
+            href="../kontakt/"
+            class="hover:text-orange-500 transition-colors duration-300 ease-in-out"
+            >Kontakt</a
+          >
+        </nav>
+
+        <!-- Hamburger Menu Button -->
+        <button
+          id="hamburger"
+          class="md:hidden flex flex-col space-y-1 focus:outline-none"
+        >
+          <span
+            class="w-6 h-0.5 bg-gray-950 transition-all duration-300"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-gray-950 transition-all duration-300"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-gray-950 transition-all duration-300"
+          ></span>
+        </button>
+
+        <select
+          class="hidden md:block w-22 justify-self-end appearance-none bg-orange-500 text-gray-950 px-4 py-2 pr-8 rounded text-sm focus:outline-none focus:ring-2 focus:ring-orange-600 cursor-pointer font-medium transition-all duration-300 bg-no-repeat bg-right"
+          style="
+            background-image: url(&quot;data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23111827%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e&quot;);
+            background-position: right 8px center;
+            background-size: 1.5em 1.5em;
+          "
+        >
+          <option
+            class="bg-white text-gray-900 py-3 px-4 hover:bg-orange-200 hover:text-orange-800"
+            value="cs"
+          >
+            CZ
+          </option>
+        </select>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="fixed inset-0 bg-white text-gray-800 transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50"
+      >
+        <div class="flex flex-col h-full">
+          <div class="flex items-center justify-between px-6 py-4 border-b">
+            <a href="/">
+              <img src="../assets/logo.png" alt="DATOR3 logo" width="150px" />
+            </a>
+            <button
+              id="closeMenu"
+              class="text-2xl focus:outline-none hover:text-orange-500 transition-colors duration-200"
+            >
+              ✕
+            </button>
+          </div>
+          <nav class="flex flex-col space-y-1 p-6">
+            <a
+              href="../o-nas/"
+              class="py-3 px-4 rounded hover:bg-orange-100 hover:text-orange-500 transition-colors duration-300 ease-in-out font-semibold"
+              >O nás</a
+            >
+            <a
+              href="../nase-sluzby/"
+              class="py-3 px-4 rounded hover:bg-orange-100 hover:text-orange-500 transition-colors duration-300 ease-in-out font-semibold"
+              >Naše služby</a
+            >
+            <a
+              href="../partneri/"
+              class="py-3 px-4 rounded hover:bg-orange-100 hover:text-orange-500 transition-colors duration-300 ease-in-out font-semibold"
+              >Partneři</a
+            >
+            <a
+              href="#"
+              class="py-3 px-4 rounded bg-orange-100 text-orange-500 font-semibold"
+              >Reference</a
+            >
+            <a
+              href="../kontakt/"
+              class="py-3 px-4 rounded hover:bg-orange-100 hover:text-orange-500 transition-colors duration-300 ease-in-out font-semibold"
+              >Kontakt</a
+            >
+            <div class="border-t pt-6 mt-6">
+              <select
+                class="w-full appearance-none bg-orange-500 text-gray-950 px-4 py-2 pr-8 rounded font-semibold focus:outline-none focus:ring-2 focus:ring-orange-600 cursor-pointer transition-all duration-300 bg-no-repeat bg-right"
+                style="
+                  background-image: url(&quot;data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23111827%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e&quot;);
+                  background-position: right 8px center;
+                  background-size: 1.5em 1.5em;
+                "
+              >
+                <option value="cs">CZ</option>
+              </select>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- REFERENCE -->
+    <section class="max-w-7xl mx-auto py-20 px-6 flex-1">
+      <h1 class="text-3xl font-bold mb-4">Naše reference</h1>
+      <p class="text-gray-900 mb-12">
+        Máme bohaté zkušenosti s implementací IT řešení pro firmy různých
+        velikostí a oborů. Naši klienti důvěřují DATOR3 dlouhodobou spoluprací a
+        kvalitou naší práce.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-16">
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/main/ceska-posta.png"
+                alt="Česká pošta"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Česká pošta</h3>
+              <p>Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/main/CD.png" alt="České dráhy" />
+            </div>
+            <div class="ref-back">
+              <h3>České dráhy</h3>
+              <p>Kybernetická bezpečnost</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/main/bobcat.png" alt="Doosan Bobcat" />
+            </div>
+            <div class="ref-back">
+              <h3>Doosan Bobcat EMEA</h3>
+              <p>Aplikační a webový software</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/main/ikem.png" alt="IKEM" />
+            </div>
+            <div class="ref-back">
+              <h3>Institut klinické a experimentální medicíny</h3>
+              <p>Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/main/MD.png"
+                alt="Metrostav Development"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Metrostav Development</h3>
+              <p>Aplikační a webový software</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/main/fm.png"
+                alt="Ministerstvo financí ČR"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Ministerstvo financí ČR</h3>
+              <p>
+                Dodávky HW/SW technologií, Networking / Komunikační
+                infrastruktura
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/main/mironet.png" alt="Mironet" />
+            </div>
+            <div class="ref-back">
+              <h3>Mironet</h3>
+              <p>Aplikační a webový software</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/main/nk.png" alt="Národní knihovna ČR" />
+            </div>
+            <div class="ref-back">
+              <h3>Národní knihovna ČR</h3>
+              <p>Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/main/pre.png" alt="Pražská energetika" />
+            </div>
+            <div class="ref-back">
+              <h3>Pražská energetika</h3>
+              <p>
+                Dodávky HW/SW technologií, Networking / Komunikační
+                infrastruktura
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/main/Pluxee.png" alt="Pluxee" />
+            </div>
+            <div class="ref-back">
+              <h3>Pluxee Česká republika</h3>
+              <p>Aplikační a webový software, Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/main/rlp-cr.png"
+                alt="Řízení letového provozu"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Řízení letového provozu</h3>
+              <p>
+                Dodávky HW/SW technologií, Networking / Komunikační
+                infrastruktura
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/main/senat.png"
+                alt="Senát Parlamentu ČR"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Senát Parlamentu České republiky</h3>
+              <p>
+                Networking / Komunikační infrastruktura, Dodávky HW/SW
+                technologií
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/main/skanska.png" alt="Skanska ČR" />
+            </div>
+            <div class="ref-back">
+              <h3>Skanska ČR</h3>
+              <p>Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/main/sprava zeleznic.png"
+                alt="Správa železnic"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Správa železnic</h3>
+              <p>Kybernetická bezpečnost</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/main/st.png" alt="ST Microelectronics" />
+            </div>
+            <div class="ref-back">
+              <h3>ST Microelectronics</h3>
+              <p>Objektová bezpečnost</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/main/O2.png" alt="O2" />
+            </div>
+            <div class="ref-back">
+              <h3>O2</h3>
+              <p>Aplikační a webový software, Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/main/zentiva.png" alt="Zentiva" />
+            </div>
+            <div class="ref-back">
+              <h3>Zentiva</h3>
+              <p>Outsourcing ICT, Networking / Komunikační infrastruktura</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/barandov.png"
+                alt="A.B. Barandov"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>A.B. Barandov</h3>
+              <p>
+                Dodávky HW/SW technologií, Networking / Komunikační
+                infrastruktura
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/adidas.png" alt="Adidas" />
+            </div>
+            <div class="ref-back">
+              <h3>Adidas</h3>
+              <p>
+                Dodávky HW/SW technologií, Networking / Komunikační
+                infrastruktura
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/AK Hlaváček & Krampera.png"
+                alt="AK Hlaváček & Krampera"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>AK Hlaváček &amp; Krampera</h3>
+              <p>Outsourcing ICT, Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/ALU KÖNIG FRANKSTAHL.png"
+                alt="ALU KÖNIG FRANKSTAHL"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>ALU KÖNIG FRANKSTAHL</h3>
+              <p>Aplikační a webový software</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/appspec.png" alt="APPSEC" />
+            </div>
+            <div class="ref-back">
+              <h3>APPSEC</h3>
+              <p>Kybernetická bezpečnost</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/aral.png" alt="Aral Praha" />
+            </div>
+            <div class="ref-back">
+              <h3>Aral Praha</h3>
+              <p>
+                Dodávky HW/SW technologií, Networking / Komunikační
+                infrastruktura
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/aramark.png" alt="Aramark" />
+            </div>
+            <div class="ref-back">
+              <h3>Aramark</h3>
+              <p>Aplikační a webový software</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/autodesk.png" alt="Autodesk" />
+            </div>
+            <div class="ref-back">
+              <h3>Autodesk</h3>
+              <p>Aplikační a webový software</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/ave.png" alt="AVE CZ" />
+            </div>
+            <div class="ref-back">
+              <h3>AVE CZ</h3>
+              <p>Aplikační a webový software</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/Benckiser.png" alt="Benckiser" />
+            </div>
+            <div class="ref-back">
+              <h3>Benckiser</h3>
+              <p>Outsourcing ICT, Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/bosch.png" alt="Bosch" />
+            </div>
+            <div class="ref-back">
+              <h3>Bosch</h3>
+              <p>Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/cis.svg"
+                alt="Centrum integrovaných služeb"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Centrum integrovaných služeb</h3>
+              <p>Aplikační a webový software, Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/cstv.png" alt="ČSTV" />
+            </div>
+            <div class="ref-back">
+              <h3>ČSTV</h3>
+              <p>Outsourcing ICT</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/equans.png" alt="Equans" />
+            </div>
+            <div class="ref-back">
+              <h3>Equans</h3>
+              <p>
+                Networking / Komunikační infrastruktura, Objektová bezpečnost
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/expert-patner.png"
+                alt="Expert & Partner"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Expert &amp; Partner</h3>
+              <p>Kybernetická bezpečnost</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/Gating Services.png"
+                alt="Gating Services"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Gating Services</h3>
+              <p>Outsourcing ICT, Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/henkel.png" alt="Henkel Praha" />
+            </div>
+            <div class="ref-back">
+              <h3>Henkel Praha</h3>
+              <p>Outsourcing ICT, Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/homecredit.png"
+                alt="Homecredit Finance"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Homecredit Finance</h3>
+              <p>Outsourcing ICT, Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/hotel-alchymist.png"
+                alt="Hotel Alchymist"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Hotel Alchymist</h3>
+              <p>Objektová bezpečnost</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/Janssen Cilag.png"
+                alt="Janssen Cilag"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Janssen Cilag</h3>
+              <p>Outsourcing ICT, Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/Johnson & Johnson.png"
+                alt="Johnson & Johnson"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Johnson &amp; Johnson</h3>
+              <p>Outsourcing ICT, Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/Koncept Ekotech.png"
+                alt="Koncept Ekotech"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Koncept Ekotech</h3>
+              <p>Aplikační a webový software</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/matrox.png" alt="Matrox" />
+            </div>
+            <div class="ref-back">
+              <h3>Matrox</h3>
+              <p>Aplikační a webový software</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/p11.png" alt="MČ Praha 11" />
+            </div>
+            <div class="ref-back">
+              <h3>MČ Praha 11</h3>
+              <p>Networking / Komunikační infrastruktura</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/p5.png" alt="MČ Praha 5" />
+            </div>
+            <div class="ref-back">
+              <h3>MČ Praha 5</h3>
+              <p>Outsourcing ICT, Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/p-kunratice.png"
+                alt="MČ Praha Kunratice"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>MČ Praha Kunratice</h3>
+              <p>Networking / Komunikační infrastruktura</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/MCHZ Ostrava.png"
+                alt="MCHZ Ostrava"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>MCHZ Ostrava</h3>
+              <p>Networking / Komunikační infrastruktura</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/Ministerstvo průmyslu a obchodu ČR.png"
+                alt="Ministerstvo průmyslu a obchodu ČR"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Ministerstvo průmyslu a obchodu ČR</h3>
+              <p>
+                Networking / Komunikační infrastruktura, Dodávky HW/SW
+                technologií
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/Ministerstvo obrany ČR.png"
+                alt="Ministerstvo obrany ČR"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Ministerstvo obrany ČR</h3>
+              <p>Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/Ministerstvo vnitra ČR.png"
+                alt="Ministerstvo vnitra ČR"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Ministerstvo vnitra ČR</h3>
+              <p>Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/Ministerstvo zemědělství ČR.png"
+                alt="Ministerstvo zemědělství ČR"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Ministerstvo zemědělství ČR</h3>
+              <p>
+                Networking / Komunikační infrastruktura, Dodávky HW/SW
+                technologií
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/Německá obchodní a průmyslová komora.png"
+                alt="Německá obchodní a průmyslová komora"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Německá obchodní a průmyslová komora</h3>
+              <p>
+                Networking / Komunikační infrastruktura, Dodávky HW/SW
+                technologií
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/Praha Music Center.png"
+                alt="Praha Music Center"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Praha Music Center</h3>
+              <p>Outsourcing ICT, Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/PREdistribuce.png"
+                alt="PREdistribuce"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>PREdistribuce</h3>
+              <p>Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/Ředitelství silnic a dálnic ČR.png"
+                alt="Ředitelství silnic a dálnic ČR"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Ředitelství silnic a dálnic ČR</h3>
+              <p>
+                Dodávky HW/SW technologií, Networking / Komunikační
+                infrastruktura
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/sodexo.png" alt="Skupina Sodexo" />
+            </div>
+            <div class="ref-back">
+              <h3>Skupina Sodexo (CZ i SK)</h3>
+              <p>
+                Aplikační a webový software, Networking / Komunikační
+                infrastruktura
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/tesco.png" alt="Tesco Stores ČR" />
+            </div>
+            <div class="ref-back">
+              <h3>Tesco Stores ČR</h3>
+              <p>Outsourcing ICT, Kybernetická bezpečnost</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/Trouw Nutrition Biofactory.png"
+                alt="Trouw Nutrition Biofactory"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Trouw Nutrition Biofactory</h3>
+              <p>Outsourcing ICT</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/Unilever.png" alt="Unilever" />
+            </div>
+            <div class="ref-back">
+              <h3>Unilever</h3>
+              <p>Outsourcing ICT, Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/Universal Music Group.png"
+                alt="Universal Music Group"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Universal Music Group</h3>
+              <p>Outsourcing ICT, Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/Vezeňská služba ČR.png"
+                alt="Vězeňská služba ČR"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Vězeňská služba ČR</h3>
+              <p>Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/main/braun.png" alt="B. Braun" />
+            </div>
+            <div class="ref-back">
+              <h3>B. Braun</h3>
+              <p>
+                Networking / Komunikační infrastruktura, Dodávky HW/SW
+                technologií
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/CyberGym.png" alt="CyberGym" />
+            </div>
+            <div class="ref-back">
+              <h3>CyberGym</h3>
+              <p>Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/excon.png" alt="Excon" />
+            </div>
+            <div class="ref-back">
+              <h3>Excon</h3>
+              <p>
+                Networking / Komunikační infrastruktura, Dodávky HW/SW
+                technologií
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/Kaučuk Kralupy.png"
+                alt="Kaučuk Kralupy"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Kaučuk Kralupy</h3>
+              <p>
+                Networking / Komunikační infrastruktura, Dodávky HW/SW
+                technologií
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/slovansky-dum.png" alt="PKSC" />
+            </div>
+            <div class="ref-back">
+              <h3>PKSC - Slovanský dům</h3>
+              <p>
+                Objektová bezpečnost, Networking / Komunikační infrastruktura
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/sanoma.png"
+                alt="Sanoma Magazines Praha"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Sanoma Magazines Praha</h3>
+              <p>Outsourcing ICT, Networking / Komunikační infrastruktura</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img
+                src="../assets/refs/other/elektrizace praha.png"
+                alt="Elektrizace Praha"
+                class="bg-black"
+              />
+            </div>
+            <div class="ref-back">
+              <h3>Elektrizace Praha</h3>
+              <p>Outsourcing ICT, Dodávky HW/SW technologií</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/sdc.png" alt="SDC FZE" />
+            </div>
+            <div class="ref-back">
+              <h3>SDC FZE</h3>
+              <p>Kybernetická bezpečnost</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <img src="../assets/refs/other/Transgas.png" alt="Transgas" />
+            </div>
+            <div class="ref-back">
+              <h3>Transgas</h3>
+              <p>
+                Networking / Komunikační infrastruktura, Dodávky HW/SW
+                technologií
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <div class="text-center flex items-center justify-center h-full">
+                <h4 class="text-sm font-semibold">Axel International</h4>
+              </div>
+            </div>
+            <div class="ref-back">
+              <h3>Axel International</h3>
+              <p>Outsourcing ICT, Aplikační a webový software</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card h-52">
+          <div class="ref-inner rounded-xl">
+            <div class="ref-front">
+              <div class="text-center flex items-center justify-center h-full">
+                <h4 class="text-sm font-semibold">Středočeské cukrovary</h4>
+              </div>
+            </div>
+            <div class="ref-back">
+              <h3>Středočeské cukrovary</h3>
+              <p>Networking / Komunikační infrastruktura</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a
+          href="../kontakt/"
+          class="inline-block bg-orange-500 text-gray-950 px-8 py-4 rounded font-semibold hover:bg-orange-600 focus:bg-orange-500 transition-colors duration-300"
+        >
+          Kontaktujte nás
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-10">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-sm text-gray-600"
+      >
+        <div>
+          <h3 class="font-semibold mb-3">Kontakt</h3>
+          <p>DATOR3 Services, a.s.</p>
+          <p>Pobřežní 620/3, 186 00 Praha 8</p>
+          <p>
+            <a
+              href="tel:+420267009311"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >+420 267 009 311</a
+            >
+          </p>
+          <p>
+            <a
+              href="mailto:dator3@dator3.cz"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >dator3@dator3.cz</a
+            >
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-3">Oddělení</h3>
+          <p>
+            Centrála společnosti:
+            <a
+              href="tel:+420267009311"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 311</a
+            >
+          </p>
+          <p>
+            Outsourcing ICT:
+            <a
+              href="tel:+420267009340"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 340</a
+            >
+          </p>
+          <p>
+            Infrastruktura – Datová centra:
+            <a
+              href="tel:+420267009320"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 320</a
+            >
+          </p>
+          <p>
+            Infrastruktura – Networking:
+            <a
+              href="tel:+420267009370"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 370</a
+            >
+          </p>
+          <p>
+            Bezpečnost – Kybernetická:
+            <a
+              href="tel:+420267009330"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 330</a
+            >
+          </p>
+          <p>
+            Bezpečnost – Objektová:
+            <a
+              href="tel:+420267009360"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 360</a
+            >
+          </p>
+          <p>
+            Integrace ICT – Systémová:
+            <a
+              href="tel:+420267009350"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 350</a
+            >
+          </p>
+          <p>
+            Integrace ICT – Software / AI:
+            <a
+              href="tel:+420267009355"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 355</a
+            >
+          </p>
+          <p>
+            Hotline:
+            <a
+              href="tel:+420267009399"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 399</a
+            >
+          </p>
+          <p>
+            Helpdesk:
+            <a
+              href="https://www.webhelpdesk.cz"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              >www.webhelpdesk.cz</a
+            >
+          </p>
+        </div>
+
+        <div class="text-right">© 2025 DATOR3</div>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const closeMenu = document.getElementById("closeMenu");
+
+      hamburger.addEventListener("click", () => {
+        mobileMenu.classList.remove("-translate-x-full");
+      });
+
+      closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.add("-translate-x-full");
+      });
+
+      // Close menu when clicking on a link
+      const menuLinks = mobileMenu.querySelectorAll("a");
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("-translate-x-full");
+        });
+      });
+    </script>
+  </body>
+</html>

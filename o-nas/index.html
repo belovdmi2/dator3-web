@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DATOR3 | O nás</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/favicon/favicon.svg"
+    />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="../assets/output.css" />
+    <link rel="stylesheet" href="../assets/cards.css" />
+    <style>
+      .ref-back p::before {
+        content: none;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gray-50 text-gray-950 flex flex-col min-h-screen">
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 bg-white shadow">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between gap-4 px-6 py-4 md:grid md:grid-cols-[150px_minmax(0,1fr)_88px] md:gap-8"
+      >
+        <a href="/" class="block w-37.5 shrink-0">
+          <img
+            src="../assets/logo.png"
+            alt="DATOR3 logo"
+            width="150"
+            class="block w-37.5 h-auto"
+          />
+        </a>
+
+        <nav class="hidden md:flex items-center justify-center gap-8 text-sm">
+          <a href="#" class="text-orange-500 font-semibold">O nás</a>
+          <a
+            href="../nase-sluzby/"
+            class="hover:text-orange-500 transition-colors duration-300 ease-in-out"
+            >Naše služby</a
+          >
+          <a
+            href="../partneri/"
+            class="hover:text-orange-500 transition-colors duration-300 ease-in-out"
+            >Partneři</a
+          >
+          <a
+            href="../reference/"
+            class="hover:text-orange-500 transition-colors duration-300 ease-in-out"
+            >Reference</a
+          >
+          <a
+            href="../kontakt/"
+            class="hover:text-orange-500 transition-colors duration-300 ease-in-out"
+            >Kontakt</a
+          >
+        </nav>
+
+        <!-- Hamburger Menu Button -->
+        <button
+          id="hamburger"
+          class="md:hidden flex flex-col space-y-1 focus:outline-none"
+        >
+          <span
+            class="w-6 h-0.5 bg-gray-950 transition-all duration-300"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-gray-950 transition-all duration-300"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-gray-950 transition-all duration-300"
+          ></span>
+        </button>
+
+        <select
+          class="hidden md:block w-22 justify-self-end appearance-none bg-orange-500 text-gray-950 px-4 py-2 pr-8 rounded text-sm focus:outline-none focus:ring-2 focus:ring-orange-600 cursor-pointer font-medium transition-all duration-300 bg-no-repeat bg-right"
+          style="
+            background-image: url(&quot;data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23111827%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e&quot;);
+            background-position: right 8px center;
+            background-size: 1.5em 1.5em;
+          "
+        >
+          <option
+            class="bg-white text-gray-900 py-3 px-4 hover:bg-orange-200 hover:text-orange-800"
+            value="cs"
+          >
+            CZ
+          </option>
+        </select>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="fixed inset-0 bg-white text-gray-800 transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50"
+      >
+        <div class="flex flex-col h-full">
+          <div class="flex items-center justify-between px-6 py-4 border-b">
+            <a href="/">
+              <img src="../assets/logo.png" alt="DATOR3 logo" width="150px" />
+            </a>
+            <button
+              id="closeMenu"
+              class="text-2xl focus:outline-none hover:text-orange-500 transition-colors duration-200"
+            >
+              ✕
+            </button>
+          </div>
+          <nav class="flex flex-col space-y-1 p-6">
+            <a
+              href="#"
+              class="py-3 px-4 rounded bg-orange-100 text-orange-500 font-semibold"
+              >O nás</a
+            >
+            <a
+              href="../nase-sluzby/"
+              class="py-3 px-4 rounded hover:bg-orange-100 hover:text-orange-500 transition-colors duration-300 ease-in-out font-semibold"
+              >Naše služby</a
+            >
+            <a
+              href="../partneri/"
+              class="py-3 px-4 rounded hover:bg-orange-100 hover:text-orange-500 transition-colors duration-300 ease-in-out font-semibold"
+              >Partneři</a
+            >
+            <a
+              href="../reference/"
+              class="py-3 px-4 rounded hover:bg-orange-100 hover:text-orange-500 transition-colors duration-300 ease-in-out font-semibold"
+              >Reference</a
+            >
+            <a
+              href="../kontakt/"
+              class="py-3 px-4 rounded hover:bg-orange-100 hover:text-orange-500 transition-colors duration-300 ease-in-out font-semibold"
+              >Kontakt</a
+            >
+            <div class="border-t pt-6 mt-6">
+              <select
+                class="w-full appearance-none bg-orange-500 text-gray-950 px-4 py-2 pr-8 rounded font-semibold focus:outline-none focus:ring-2 focus:ring-orange-600 cursor-pointer transition-all duration-300 bg-no-repeat bg-right"
+                style="
+                  background-image: url(&quot;data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23111827%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e&quot;);
+                  background-position: right 8px center;
+                  background-size: 1.5em 1.5em;
+                "
+              >
+                <option value="cs">CZ</option>
+              </select>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- O NÁS - INTRO -->
+    <section class="bg-white py-20 flex-1">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 class="text-3xl font-bold mb-6 text-gray-950">O nás</h1>
+            <p class="text-base text-gray-900 mb-6 leading-relaxed">
+              Již od roku 1990 spojujeme podnikání našich zákazníků s
+              informačními a komunikačními technologiemi. Jsme tak jednou z
+              nejstarších českých společností v oblasti ICT v České republice.
+            </p>
+            <p class="text-base text-gray-900 leading-relaxed">
+              Zkušenosti, které jsme získali při realizaci náročných zakázek,
+              významná partnerství s globálními výrobci hardware a software, a
+              především kompetentní ICT specialisté jsou základem přidané
+              hodnoty námi poskytovaných služeb, které jsme Vám připraveni
+              nabídnout.
+            </p>
+            <a
+              href="../nase-sluzby/"
+              class="inline-flex items-center mt-8 text-orange-500 font-semibold text-base group hover:text-orange-600 transition-colors"
+            >
+              Naše služby
+              <span
+                class="ml-2 transition-transform duration-300 group-hover:translate-x-1"
+                >→</span
+              >
+            </a>
+          </div>
+          <div class="md:order-2">
+            <img
+              src="../assets/about-info.jpg"
+              alt="DATOR3 tým"
+              class="w-full rounded-lg shadow-lg object-cover h-96"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROČ ZVOLIT DATOR3 -->
+    <section class="bg-gray-50 py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center text-gray-950">
+          Proč zvolit DATOR3?
+        </h2>
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-x-8 gap-y-12 text-orange-500"
+        >
+          <div class="flex flex-col items-center text-center gap-3">
+            <img
+              src="../assets/icons/deep-research-icon.svg"
+              alt="Hluboká expertíza"
+              class="w-16 h-16 object-contain"
+            />
+            <h4 class="text-gray-900">Hluboká technická expertíza</h4>
+          </div>
+          <div class="flex flex-col items-center text-center gap-3">
+            <img
+              src="../assets/icons/complex-icon.svg"
+              alt="Komplexní řešení"
+              class="w-16 h-16 object-contain"
+            />
+            <h4 class="text-gray-900">Komplexní řešení technologií</h4>
+          </div>
+          <div class="flex flex-col items-center text-center gap-3">
+            <img
+              src="../assets/icons/individual-icon.svg"
+              alt="Individuální přístup"
+              class="w-16 h-16 object-contain"
+            />
+            <h4 class="text-gray-900">Individuální přístup</h4>
+          </div>
+          <div class="flex flex-col items-center text-center gap-3">
+            <img
+              src="../assets/icons/contacts-icon.svg"
+              alt="Kontakt"
+              class="w-16 h-16 object-contain"
+            />
+            <h4 class="text-gray-900">Dlouhodobá podpora zákazníků</h4>
+          </div>
+          <div class="flex flex-col items-center text-center gap-3">
+            <img
+              src="../assets/icons/35-ys-icon.svg"
+              alt="35+ let"
+              class="w-16 h-16 object-contain"
+            />
+            <h4 class="text-gray-900">35+ let zkušeností</h4>
+          </div>
+          <div class="flex flex-col items-center text-center gap-3">
+            <img
+              src="../assets/icons/cert-icon.svg"
+              alt="Certifikovaní specialisté"
+              class="w-16 h-16 object-contain"
+            />
+            <h4 class="text-gray-900">Certifikovaní specialisté</h4>
+          </div>
+          <div class="flex flex-col items-center text-center gap-3">
+            <img
+              src="../assets/icons/local-icon.svg"
+              alt="Lokální znalost"
+              class="w-16 h-16 object-contain"
+            />
+            <h4 class="text-gray-900">Lokální znalost trhu</h4>
+          </div>
+          <div class="flex flex-col items-center text-center gap-3">
+            <img
+              src="../assets/icons/global-icon.svg"
+              alt="Globální partnerství"
+              class="w-16 h-16 object-contain"
+            />
+            <h4 class="text-gray-900">Globální technologická partnerství</h4>
+          </div>
+          <div class="flex flex-col items-center text-center gap-3">
+            <img
+              src="../assets/icons/know-how-icon.svg"
+              alt="Know-how"
+              class="w-16 h-16 object-contain"
+            />
+            <h4 class="text-gray-900">Silné technické know-how</h4>
+          </div>
+          <div class="flex flex-col items-center text-center gap-3">
+            <img
+              src="../assets/icons/friendly.svg"
+              alt="Partnerský přístup"
+              class="w-16 h-16 object-contain"
+            />
+            <h4 class="text-gray-900">Partnerský přístup</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAŠE VIZE + KLÍČOVÉ KOMPETENCE -->
+    <section class="bg-white py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-stretch">
+          <div class="md:order-1">
+            <img
+              src="../assets/about-vision.jpg"
+              alt="Naše vize"
+              class="w-full h-full rounded-lg shadow-lg object-cover"
+            />
+          </div>
+          <div class="md:order-2 flex flex-col gap-10">
+            <div>
+              <h2 class="text-3xl font-bold mb-4 text-gray-950">Naše vize</h2>
+              <ul class="text-gray-900">
+                <li class="flex items-center gap-4 p-2">
+                  <span class="text-orange-500 font-bold text-2xl shrink-0"
+                    >▸</span
+                  >
+                  <span class="text-base"
+                    >Pomáhat organizacím v rozvoji jejich vlastního podnikání
+                    poskytováním kvalitních ICT technologií a služeb</span
+                  >
+                </li>
+                <li class="flex items-center gap-4 p-2">
+                  <span class="text-orange-500 font-bold text-2xl shrink-0"
+                    >▸</span
+                  >
+                  <span class="text-base"
+                    >Pomáhat organizacím provozovat moderní a bezpečnou IT
+                    infrastrukturu</span
+                  >
+                </li>
+                <li class="flex items-center gap-4 p-2">
+                  <span class="text-orange-500 font-bold text-2xl shrink-0"
+                    >▸</span
+                  >
+                  <span class="text-base"
+                    >Zvyšovat odolnost organizací vůči kybernetickým
+                    hrozbám</span
+                  >
+                </li>
+                <li class="flex items-center gap-4 p-2">
+                  <span class="text-orange-500 font-bold text-2xl shrink-0"
+                    >▸</span
+                  >
+                  <span class="text-base"
+                    >Podporovat a rozvíjet digitální transformaci
+                    organizací</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="text-3xl font-bold mb-4 text-gray-950">
+                Klíčové kompetence
+              </h2>
+              <ul class="text-gray-900">
+                <li class="flex items-center gap-4 p-2">
+                  <span class="text-orange-500 font-bold text-2xl shrink-0"
+                    >▸</span
+                  >
+                  <span class="text-base"
+                    >Outsourcing / Managed IT Services</span
+                  >
+                </li>
+                <li class="flex items-center gap-4 p-2">
+                  <span class="text-orange-500 font-bold text-2xl shrink-0"
+                    >▸</span
+                  >
+                  <span class="text-base">Outsourcing ICT technologií</span>
+                </li>
+                <li class="flex items-center gap-4 p-2">
+                  <span class="text-orange-500 font-bold text-2xl shrink-0"
+                    >▸</span
+                  >
+                  <span class="text-base"
+                    >Kybernetická i objektová bezpečnost</span
+                  >
+                </li>
+                <li class="flex items-center gap-4 p-2">
+                  <span class="text-orange-500 font-bold text-2xl shrink-0"
+                    >▸</span
+                  >
+                  <span class="text-base"
+                    >Enterprise infrastruktura, datová centra a
+                    virtualizace</span
+                  >
+                </li>
+                <li class="flex items-center gap-4 p-2">
+                  <span class="text-orange-500 font-bold text-2xl shrink-0"
+                    >▸</span
+                  >
+                  <span class="text-base">Síťová infrastruktura</span>
+                </li>
+                <li class="flex items-center gap-4 p-2">
+                  <span class="text-orange-500 font-bold text-2xl shrink-0"
+                    >▸</span
+                  >
+                  <span class="text-base">Systémová integrace</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PODPORUJEME -->
+    <section class="bg-gray-50 py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center text-gray-950">
+          Podporujeme
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
+          <div class="ref-card h-44">
+            <div class="ref-inner rounded-xl">
+              <div class="ref-front">
+                <img
+                  src="../assets/support/clovek-v-tisni.png"
+                  alt="Člověk v tísni"
+                  class="w-28 h-28 object-contain"
+                />
+              </div>
+              <div class="ref-back">
+                <h3>Člověk v tísni</h3>
+              </div>
+            </div>
+          </div>
+          <div class="ref-card h-44">
+            <div class="ref-inner rounded-xl">
+              <div class="ref-front">
+                <img
+                  src="../assets/support/diakonie-cce.png"
+                  alt="Diakonie ČCE"
+                  class="w-28 h-28 object-contain"
+                />
+              </div>
+              <div class="ref-back">
+                <h3>Diakonie ČCE</h3>
+              </div>
+            </div>
+          </div>
+          <div class="ref-card h-44">
+            <div class="ref-inner rounded-xl">
+              <div class="ref-front">
+                <img
+                  src="../assets/support/dobry-andel.png"
+                  alt="Dobrý anděl"
+                  class="w-28 h-28 object-contain"
+                />
+              </div>
+              <div class="ref-back">
+                <h3>Dobrý anděl</h3>
+              </div>
+            </div>
+          </div>
+          <div class="ref-card h-44">
+            <div class="ref-inner rounded-xl">
+              <div class="ref-front">
+                <img
+                  src="../assets/support/ukrajina.png"
+                  alt="Podpora Ukrajiny"
+                  class="w-28 h-28 object-contain"
+                />
+              </div>
+              <div class="ref-back">
+                <h3>Podpora Ukrajiny</h3>
+                <p>Velvyslanectví Ukrajiny v České republice</p>
+              </div>
+            </div>
+          </div>
+          <div class="ref-card h-44">
+            <div class="ref-inner rounded-xl">
+              <div class="ref-front">
+                <img
+                  src="../assets/support/drony-nemesis.png"
+                  alt="Drony Nemesis"
+                  class="w-28 h-28 object-contain"
+                />
+              </div>
+              <div class="ref-back">
+                <h3>Drony Nemesis</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-white py-10">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-sm text-gray-600"
+      >
+        <div>
+          <h3 class="font-semibold mb-3">Kontakt</h3>
+          <p>DATOR3 Services, a.s.</p>
+          <p>Pobřežní 620/3, 186 00 Praha 8</p>
+          <p>
+            <a
+              href="tel:+420267009311"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >+420 267 009 311</a
+            >
+          </p>
+          <p>
+            <a
+              href="mailto:dator3@dator3.cz"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >dator3@dator3.cz</a
+            >
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-3">Oddělení</h3>
+          <p>
+            Centrála společnosti:
+            <a
+              href="tel:+420267009311"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 311</a
+            >
+          </p>
+          <p>
+            Outsourcing ICT:
+            <a
+              href="tel:+420267009340"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 340</a
+            >
+          </p>
+          <p>
+            Infrastruktura – Datová centra:
+            <a
+              href="tel:+420267009320"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 320</a
+            >
+          </p>
+          <p>
+            Infrastruktura – Networking:
+            <a
+              href="tel:+420267009370"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 370</a
+            >
+          </p>
+          <p>
+            Bezpečnost – Kybernetická:
+            <a
+              href="tel:+420267009330"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 330</a
+            >
+          </p>
+          <p>
+            Bezpečnost – Objektová:
+            <a
+              href="tel:+420267009360"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 360</a
+            >
+          </p>
+          <p>
+            Integrace ICT – Systémová:
+            <a
+              href="tel:+420267009350"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 350</a
+            >
+          </p>
+          <p>
+            Integrace ICT – Software / AI:
+            <a
+              href="tel:+420267009355"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 355</a
+            >
+          </p>
+          <p>
+            Hotline:
+            <a
+              href="tel:+420267009399"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 399</a
+            >
+          </p>
+          <p>
+            Helpdesk:
+            <a
+              href="https://www.webhelpdesk.cz"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              >www.webhelpdesk.cz</a
+            >
+          </p>
+        </div>
+
+        <div class="text-right">© 2025 DATOR3</div>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const closeMenu = document.getElementById("closeMenu");
+
+      hamburger.addEventListener("click", () => {
+        mobileMenu.classList.remove("-translate-x-full");
+      });
+
+      closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.add("-translate-x-full");
+      });
+
+      // Close menu when clicking on a link
+      const menuLinks = mobileMenu.querySelectorAll("a");
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("-translate-x-full");
+        });
+      });
+    </script>
+  </body>
+</html>

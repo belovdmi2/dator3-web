@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DATOR3 | Partneři</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/favicon/favicon.svg"
+    />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="../assets/output.css" />
+    <link rel="stylesheet" href="../assets/cards.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gray-50 text-gray-950 flex flex-col min-h-screen">
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 bg-white shadow">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between gap-4 px-6 py-4 md:grid md:grid-cols-[150px_minmax(0,1fr)_88px] md:gap-8"
+      >
+        <a href="/" class="block w-37.5 shrink-0">
+          <img
+            src="../assets/logo.png"
+            alt="DATOR3 logo"
+            width="150"
+            class="block w-37.5 h-auto"
+          />
+        </a>
+
+        <nav class="hidden md:flex items-center justify-center gap-8 text-sm">
+          <a
+            href="../o-nas/"
+            class="hover:text-orange-500 transition-colors duration-300 ease-in-out"
+            >O nás</a
+          >
+          <a
+            href="../nase-sluzby/"
+            class="hover:text-orange-500 transition-colors duration-300 ease-in-out"
+            >Naše služby</a
+          >
+          <a href="#" class="text-orange-500 font-semibold">Partneři</a>
+          <a
+            href="../reference/"
+            class="hover:text-orange-500 transition-colors duration-300 ease-in-out"
+            >Reference</a
+          >
+          <a
+            href="../kontakt/"
+            class="hover:text-orange-500 transition-colors duration-300 ease-in-out"
+            >Kontakt</a
+          >
+        </nav>
+
+        <!-- Hamburger Menu Button -->
+        <button
+          id="hamburger"
+          class="md:hidden flex flex-col space-y-1 focus:outline-none"
+        >
+          <span
+            class="w-6 h-0.5 bg-gray-950 transition-all duration-300"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-gray-950 transition-all duration-300"
+          ></span>
+          <span
+            class="w-6 h-0.5 bg-gray-950 transition-all duration-300"
+          ></span>
+        </button>
+
+        <select
+          class="hidden md:block w-22 justify-self-end appearance-none bg-orange-500 text-gray-950 px-4 py-2 pr-8 rounded text-sm focus:outline-none focus:ring-2 focus:ring-orange-600 cursor-pointer font-medium transition-all duration-300 bg-no-repeat bg-right"
+          style="
+            background-image: url(&quot;data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23111827%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e&quot;);
+            background-position: right 8px center;
+            background-size: 1.5em 1.5em;
+          "
+        >
+          <option
+            class="bg-white text-gray-900 py-3 px-4 hover:bg-orange-200 hover:text-orange-800"
+            value="cs"
+          >
+            CZ
+          </option>
+        </select>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="fixed inset-0 bg-white text-gray-800 transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50"
+      >
+        <div class="flex flex-col h-full">
+          <div class="flex items-center justify-between px-6 py-4 border-b">
+            <a href="/">
+              <img src="../assets/logo.png" alt="DATOR3 logo" width="150px" />
+            </a>
+            <button
+              id="closeMenu"
+              class="text-2xl focus:outline-none hover:text-orange-500 transition-colors duration-200"
+            >
+              ✕
+            </button>
+          </div>
+          <nav class="flex flex-col space-y-1 p-6">
+            <a
+              href="../o-nas/"
+              class="py-3 px-4 rounded hover:bg-orange-100 hover:text-orange-500 transition-colors duration-300 ease-in-out font-semibold"
+              >O nás</a
+            >
+            <a
+              href="../nase-sluzby/"
+              class="py-3 px-4 rounded hover:bg-orange-100 hover:text-orange-500 transition-colors duration-300 ease-in-out font-semibold"
+              >Naše služby</a
+            >
+            <a
+              href="#"
+              class="py-3 px-4 rounded bg-orange-100 text-orange-500 font-semibold"
+              >Partneři</a
+            >
+            <a
+              href="../reference/"
+              class="py-3 px-4 rounded hover:bg-orange-100 hover:text-orange-500 transition-colors duration-300 ease-in-out font-semibold"
+              >Reference</a
+            >
+            <a
+              href="../kontakt/"
+              class="py-3 px-4 rounded hover:bg-orange-100 hover:text-orange-500 transition-colors duration-300 ease-in-out font-semibold"
+              >Kontakt</a
+            >
+            <div class="border-t pt-6 mt-6">
+              <select
+                class="w-full appearance-none bg-orange-500 text-gray-950 px-4 py-2 pr-8 rounded font-semibold focus:outline-none focus:ring-2 focus:ring-orange-600 cursor-pointer transition-all duration-300 bg-no-repeat bg-right"
+                style="
+                  background-image: url(&quot;data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23111827%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e&quot;);
+                  background-position: right 8px center;
+                  background-size: 1.5em 1.5em;
+                "
+              >
+                <option value="cs">CZ</option>
+              </select>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- PARTNERI -->
+    <section class="max-w-7xl mx-auto py-20 px-6 flex-1">
+      <h1 class="text-3xl font-bold mb-4">Naši partneři</h1>
+      <p class="text-gray-900 mb-12">
+        Spolupracujeme s vybranými partnery, kteří garantují kvalitu a inovace v
+        oblasti informačních technologií. Naše partnerství umožňuje poskytovat
+        komplexní řešení s nejvyšší úrovní service a technické podpory.
+      </p>
+
+      <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-8 mb-16">
+        <a
+          href="https://www.adobe.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/adobe-seeklogo 1.png"
+              alt="Adobe"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.apple.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/apple-seeklogo 1.png"
+              alt="Apple"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.microsoft.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/Microsoft_Logo_1 1.png"
+              alt="Microsoft"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.lenovo.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/Lenovo_idDXuX8rvi_1 1.png"
+              alt="Lenovo"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.veeam.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/Veeam_idT2M44sxk_1 1.png"
+              alt="Veeam"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.vmware.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/VMware_id9aM3SI1r_0 1.png"
+              alt="VMware"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.bitdefender.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/Bitdefender_id_CnoLMwU_1 1.png"
+              alt="Bitdefender"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.fortinet.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/Fortinet_idZhbQEBqi_1 1.png"
+              alt="Fortinet"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.dell.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/Dell_Logo_1 1.png"
+              alt="Dell"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.honeywell.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/Honeywell_id_0mEGxLC_1 1.png"
+              alt="Honeywell"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.axis.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/Axis Communications_idAWyb57WO_1 1.png"
+              alt="Axis"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.belden.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/Belden Inc._idktf2WE2P_0 1.png"
+              alt="Belden"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.hidglobal.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/HID Global_idV2134Od7_0 1.png"
+              alt="HID"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.opentext.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/OpenText_idWupC0LGK_1 1.png"
+              alt="OpenText"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.panduit.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/Panduit_idcCiNjMcE_0 1.png"
+              alt="Panduit"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.fidelissecurity.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/fidelis-security.png"
+              alt="Fidelis Security"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.garlandtechnology.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/garland.png"
+              alt="Garland"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.proxmox.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/paramox.png"
+              alt="Proxmox"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.se.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/schineider-el.svg"
+              alt="Schneider Electric"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.siemens.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/siemens.png"
+              alt="Siemens"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.telegaertner.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/telegartner.png"
+              alt="Telegartner"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.hpe.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/hewlett-packard-enterprise-logo 1.png"
+              alt="HPE"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.milestonesys.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/milestone-systems 1.png"
+              alt="Milestone"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.broadcom.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/symantec-logo10 1.png"
+              alt="Symantec"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.zabbix.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/partners/idK9iYgl0P_1762898139982 1.png"
+              alt="Zabbix"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.bbraun.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="partner-card h-52 rounded-xl bg-white shadow hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center justify-center p-6"
+        >
+          <div class="text-center">
+            <img
+              src="../assets/refs/main/braun.png"
+              alt="B. Braun"
+              class="w-28 h-28 object-contain mx-auto"
+            />
+          </div>
+        </a>
+      </div>
+
+      <div class="text-center">
+        <a
+          href="../kontakt/"
+          class="inline-block bg-orange-500 text-gray-950 px-8 py-4 rounded font-semibold hover:bg-orange-600 focus:bg-orange-500 transition-colors duration-300"
+        >
+          Kontaktujte nás
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-10">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-sm text-gray-600"
+      >
+        <div>
+          <h3 class="font-semibold mb-3">Kontakt</h3>
+          <p>DATOR3 Services, a.s.</p>
+          <p>Pobřežní 620/3, 186 00 Praha 8</p>
+          <p>
+            <a
+              href="tel:+420267009311"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >+420 267 009 311</a
+            >
+          </p>
+          <p>
+            <a
+              href="mailto:dator3@dator3.cz"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >dator3@dator3.cz</a
+            >
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-3">Oddělení</h3>
+          <p>
+            Centrála společnosti:
+            <a
+              href="tel:+420267009311"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 311</a
+            >
+          </p>
+          <p>
+            Outsourcing ICT:
+            <a
+              href="tel:+420267009340"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 340</a
+            >
+          </p>
+          <p>
+            Infrastruktura – Datová centra:
+            <a
+              href="tel:+420267009320"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 320</a
+            >
+          </p>
+          <p>
+            Infrastruktura – Networking:
+            <a
+              href="tel:+420267009370"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 370</a
+            >
+          </p>
+          <p>
+            Bezpečnost – Kybernetická:
+            <a
+              href="tel:+420267009330"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 330</a
+            >
+          </p>
+          <p>
+            Bezpečnost – Objektová:
+            <a
+              href="tel:+420267009360"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 360</a
+            >
+          </p>
+          <p>
+            Integrace ICT – Systémová:
+            <a
+              href="tel:+420267009350"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 350</a
+            >
+          </p>
+          <p>
+            Integrace ICT – Software / AI:
+            <a
+              href="tel:+420267009355"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 355</a
+            >
+          </p>
+          <p>
+            Hotline:
+            <a
+              href="tel:+420267009399"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              >267 009 399</a
+            >
+          </p>
+          <p>
+            Helpdesk:
+            <a
+              href="https://www.webhelpdesk.cz"
+              class="text-orange-400 hover:text-orange-500 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              >www.webhelpdesk.cz</a
+            >
+          </p>
+        </div>
+
+        <div class="text-right">© 2025 DATOR3</div>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const closeMenu = document.getElementById("closeMenu");
+
+      hamburger.addEventListener("click", () => {
+        mobileMenu.classList.remove("-translate-x-full");
+      });
+
+      closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.add("-translate-x-full");
+      });
+
+      // Close menu when clicking on a link
+      const menuLinks = mobileMenu.querySelectorAll("a");
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("-translate-x-full");
+        });
+      });
+    </script>
+  </body>
+</html>
