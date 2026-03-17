@@ -3,7 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DATOR3</title>
+    <title>DATOR3 | ICT služby, outsourcing, kybernetická bezpečnost</title>
+    <meta
+      name="description"
+      content="DATOR3 - od roku 1990 poskytujeme ICT služby: outsourcing IT, systémová integrace, kybernetická a objektová bezpečnost, síťová a provozní infrastruktura. Váš spolehlivý partner v oblasti informačních technologií."
+    />
+    <meta
+      name="keywords"
+      content="ICT služby, outsourcing IT, kybernetická bezpečnost, systémová integrace, síťová infrastruktura, datová centra, DATOR3, správa IT, managed services"
+    />
+    <meta name="robots" content="index, follow" />
     <link
       rel="icon"
       type="image/png"
@@ -19,61 +28,14 @@
     />
     <meta name="apple-mobile-web-app-title" content="DATOR3" />
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
-    <link rel="stylesheet" href="./assets/output.css" />
+    <link rel="stylesheet" href="./assets/output-tailwind.css" />
     <link rel="stylesheet" href="./assets/cards.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <style>
-      /* Carousel */
-      html {
-        scroll-behavior: smooth;
-      }
-
-      .partners-carousel-group img {
-        display: block;
-        height: 40px;
-      }
-
-      .partners-carousel-wrapper {
-        margin: 0 auto;
-        padding: 20px 0;
-        width: 100%;
-        overflow: hidden;
-        display: flex;
-      }
-
-      .partners-carousel-wrapper > * {
-        flex: 0 0 auto;
-      }
-
-      .partners-carousel-wrapper:hover .partners-carousel-group {
-        animation-play-state: paused;
-      }
-
-      .partners-carousel-group {
-        display: flex;
-        gap: 2rem;
-        width: max-content;
-        margin-right: 2rem;
-      }
-
-      .partners-carousel-group {
-        will-change: transform;
-        animation: scrolling 60s linear infinite;
-      }
-
-      @keyframes scrolling {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-100%);
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./assets/carousel.css" />
   </head>
 
   <body class="bg-gray-50 text-gray-950">
@@ -956,26 +918,6 @@
       </div>
     </footer>
 
-    <script>
-      const hamburger = document.getElementById("hamburger");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const closeMenu = document.getElementById("closeMenu");
-
-      hamburger.addEventListener("click", () => {
-        mobileMenu.classList.remove("-translate-x-full");
-      });
-
-      closeMenu.addEventListener("click", () => {
-        mobileMenu.classList.add("-translate-x-full");
-      });
-
-      // Close menu when clicking on a link
-      const menuLinks = mobileMenu.querySelectorAll("a");
-      menuLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.add("-translate-x-full");
-        });
-      });
-    </script>
+    <script src="./assets/hamburger.js" defer></script>
   </body>
 </html>

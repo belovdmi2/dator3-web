@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DATOR3 | O nás</title>
+    <meta
+      name="description"
+      content="Společnost DATOR3 působí v oblasti ICT od roku 1990. Nabízíme outsourcing IT, kybernetickou bezpečnost, systémovou integraci a komplexní ICT řešení pro firmy a organizace."
+    />
+    <meta
+      name="keywords"
+      content="DATOR3, o nás, ICT společnost, IT firma Praha, outsourcing IT, kybernetická bezpečnost, systémová integrace"
+    />
+    <meta name="robots" content="index, follow" />
     <link
       rel="icon"
       type="image/png"
@@ -23,13 +32,9 @@
     />
     <meta name="apple-mobile-web-app-title" content="DATOR3" />
     <link rel="manifest" href="../assets/favicon/site.webmanifest" />
-    <link rel="stylesheet" href="../assets/output.css" />
+    <link rel="stylesheet" href="../assets/output-tailwind.css" />
     <link rel="stylesheet" href="../assets/cards.css" />
-    <style>
-      .ref-back p::before {
-        content: none;
-      }
-    </style>
+    <link rel="stylesheet" href="index.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -604,26 +609,6 @@
       </div>
     </footer>
 
-    <script>
-      const hamburger = document.getElementById("hamburger");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const closeMenu = document.getElementById("closeMenu");
-
-      hamburger.addEventListener("click", () => {
-        mobileMenu.classList.remove("-translate-x-full");
-      });
-
-      closeMenu.addEventListener("click", () => {
-        mobileMenu.classList.add("-translate-x-full");
-      });
-
-      // Close menu when clicking on a link
-      const menuLinks = mobileMenu.querySelectorAll("a");
-      menuLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.add("-translate-x-full");
-        });
-      });
-    </script>
+    <script src="../assets/hamburger.js" defer></script>
   </body>
 </html>

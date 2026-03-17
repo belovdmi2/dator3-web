@@ -4,28 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DATOR3 | Naše služby</title>
+    <meta name="description" content="Poskytujeme outsourcing a správu IT, systémovou integraci, vývoj softwaru, provozní infrastrukturu, komunikační sítě a komplexní kybernetickou i objektovou bezpečnost." />
+    <meta name="keywords" content="outsourcing IT, managed IT services, systémová integrace, kybernetická bezpečnost, objektová bezpečnost, síťová infrastruktura, datová centra, ICT služby" />
+    <meta name="robots" content="index, follow" />
     <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
     <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="DATOR3" />
     <link rel="manifest" href="../assets/favicon/site.webmanifest" />
-    <link rel="stylesheet" href="../assets/output.css" />
+    <link rel="stylesheet" href="../assets/output-tailwind.css" />
     <link rel="stylesheet" href="../assets/cards.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
 
-      section {
-        scroll-margin-top: 5rem;
-      }
-    </style>
   </head>
 
   <body class="bg-gray-50 text-gray-950 flex flex-col min-h-screen">
@@ -525,26 +520,6 @@
       </div>
     </footer>
 
-    <script>
-      const hamburger = document.getElementById("hamburger");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const closeMenu = document.getElementById("closeMenu");
-
-      hamburger.addEventListener("click", () => {
-        mobileMenu.classList.remove("-translate-x-full");
-      });
-
-      closeMenu.addEventListener("click", () => {
-        mobileMenu.classList.add("-translate-x-full");
-      });
-
-      // Close menu when clicking on a link
-      const menuLinks = mobileMenu.querySelectorAll("a");
-      menuLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.add("-translate-x-full");
-        });
-      });
-    </script>
+    <script src="../assets/hamburger.js" defer></script>
   </body>
 </html>

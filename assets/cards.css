@@ -1,6 +1,11 @@
 /* ─── Shared base ─────────────────────────────────────────────── */
 html {
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 5rem;
 }
 
 /* ─── Reference flip cards (index.html, reference/) ──────────── */

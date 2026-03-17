@@ -23,8 +23,9 @@ dator3-web/
 ├── reference/index.html      # Stránka Reference
 ├── kontakt/index.html        # Stránka Kontakt
 ├── assets/
-│   ├── output.css            # Zkompilovaný CSS (vygenerovaný Tailwindem)
-│   ├── input.css             # Zdrojový CSS (custom styles)
+│   ├── output-tailwind.css   # Zkompilovaný CSS (vygenerovaný Tailwindem)
+│   ├── carousel.css          # Animace partnery carouselu
+│   ├── hamburger.js          # Hamburger menu script
 │   ├── cards.css             # Styling pro referenční karty
 │   ├── logo.png              # Logo DATOR3
 │   ├── hero-background.jpg   # Hero section obrázek
@@ -36,6 +37,7 @@ dator3-web/
 │   │   ├── main/             # Loga hlavních referenčních klientů
 │   │   └── other/            # Loga ostatních klientů
 │   └── partners/             # Loga partnerů
+├── input-tailwind.css        # Zdrojový Tailwind CSS (custom theme)
 ├── build.js                  # Build script pro packování
 ├── package.json              # NPM konfigurace
 └── README.md                 # Tento soubor
@@ -59,14 +61,15 @@ npm install
 
 ### Sledování změn stylu
 
-Pro vývoj s live aktualizací CSS během úprav `input.css`:
+Pro vývoj s live aktualizací CSS během úprav `input-tailwind.css`:
 
 ```bash
-npx @tailwindcss/cli -i assets/input.css -o assets/output.css --watch
+npx @tailwindcss/cli -i input-tailwind.css -o assets/output-tailwind.css --watch
 ```
 
 **Co dělá:**
-- Automaticky kompiluje do `assets/output.css`
+
+- Automaticky kompiluje do `assets/output-tailwind.css`
 - Aktualizuje se při každé změně
 - Optimalizuje CSS na základě použitých tříd v HTML
 
@@ -93,7 +96,8 @@ npm run build
 ```
 
 **Co dělá:**
-- Vytvoří složku `dist/` 
+
+- Vytvoří složku `dist/`
 - Nakopíruje všechny HTML stránky
 - Nakopíruje složku `assets/` se všemi obrázky, CSS a favicon
 - Vymaže zbytečné vývojové soubory (package.json, build.js, .DS_Store)

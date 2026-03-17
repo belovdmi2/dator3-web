@@ -1,0 +1,39 @@
+/* ─── Partners carousel (index.html) ─────────────────────────── */
+.partners-carousel-group img {
+  display: block;
+  height: 40px;
+}
+
+.partners-carousel-wrapper {
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.partners-carousel-wrapper > * {
+  flex: 0 0 auto;
+}
+
+.partners-carousel-wrapper:hover .partners-carousel-group {
+  animation-play-state: paused;
+}
+
+.partners-carousel-group {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  margin-right: 2rem;
+  will-change: transform;
+  animation: scrolling 60s linear infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
