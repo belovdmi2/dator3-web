@@ -8,6 +8,14 @@ section {
   scroll-margin-top: 5rem;
 }
 
+h1, h2 {
+  color: #f7931e; /* orange-500 */
+}
+
+h3, h4, h5, h6 {
+  color: #999999; /* gray-400 */
+}
+
 /* ─── Reference flip cards (index.html, reference/) ──────────── */
 .ref-card {
   perspective: 1000px;
